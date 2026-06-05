@@ -458,6 +458,51 @@
         text-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }
 }
+/* Галерея фото */
+.gallery-section {
+    background: linear-gradient(135deg, #F9F5F3 0%, #F5F0EC 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.gallery {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Мобильная версия галереи */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .gallery-img {
+        height: 300px;
+    }
+}
     </style>
 </head>
 <body>
@@ -493,44 +538,20 @@
 </section>
 
     <!-- About Section -->
-     <section class="story">
-        <h2>Наша история</h2>
-        <div class="timeline-story">
-            
-            <div class="story-item">
-                <div class="story-date">Техникум</div>
-                <div class="story-content">
-                    <h3>🎓 Знакомство</h3>
-                    <p>Поступили в одну группу в техникуме на первом курсе. Судьба решила, что нам нужно учиться вместе!</p>
-                </div>
-            </div>
-            
-            <div class="story-item">
-                <div class="story-date">Парк</div>
-                <div class="story-content">
-                    <h3>🎡 Первое свидание</h3>
-                    <p>Пошли в парк аттракционов. Так как Наталья ранее проиграла мне спор, я загадал желание — подняться на колесо обозрения. Там был первый поцелуй... Правда, для неё это было худшее свидание — она же боится высоты! 😄</p>
-                </div>
-            </div>
-            
-            <div class="story-item">
-                <div class="story-date">Вместе</div>
-                <div class="story-content">
-                    <h3>📚 Общие годы</h3>
-                    <p>Вместе учились в техникуме, потом в институте. Общие игры, общие пары, общие воспоминания. Даже "бодаемся" иногда — буквально сталкиваемся лбами, кто кого переборет. Она Телец, я Лев — два упрямца! 🦁♉</p>
-                </div>
-            </div>
-            
-            <div class="story-item">
-                <div class="story-date">2026</div>
-                <div class="story-content">
-                    <h3>💍 Предложение</h3>
-                    <p>Пришло кольцо — сразу сделал предложение! В тот же день. Наталья отругала за то, что без предупреждения... Но сказала "Да"! ❤️</p>
-                </div>
-            </div>
-            
+     <section class="gallery-section">
+    <h2>Моменты счастья</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/photo1.jpg" alt="Момент 1" class="gallery-img">
         </div>
-    </section>
+        <div class="gallery-item">
+            <img src="images/photo2.jpg" alt="Момент 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+            <img src="images/photo3.jpg" alt="Момент 3" class="gallery-img">
+        </div>
+    </div>
+</section>
 
     <!-- Details Section -->
     <section class="details">
