@@ -19,20 +19,52 @@
         
         /* Hero Section */
        .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/hero.jpg');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    
+    position: relative;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #E8D5D0; /* Пастельный фон по бокам фото */
+    overflow: hidden;
+}
+
+.hero-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.7; /* Немного приглушаем фото */
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
     text-align: center;
     color: white;
     padding: 2rem;
-        }
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* Тень для читаемости текста */
+}
+
+.hero-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.hero-overlay .date {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.hero-overlay .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
         
         .hero h1 {
             font-size: 3.5rem;
@@ -278,28 +310,33 @@
 
     <!-- Hero Section -->
     <section class="hero">
+    <img src="images/hero.jpg" alt="Александр и Наталья" class="hero-photo">
+    <div class="hero-overlay">
         <h1>Александр & Наталья</h1>
         <p class="date">3 октября 2026</p>
         <p class="subtitle">Приглашаем вас разделить с нами этот особенный день</p>
-<div class="countdown">
-    <div class="countdown-item">
-        <span class="countdown-number" id="days">00</span>
-        <span class="countdown-label">Дней</span>
+        
+        <!-- Таймер обратного отсчета -->
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Дней</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Часов</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Минут</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Секунд</span>
+            </div>
+        </div>
     </div>
-    <div class="countdown-item">
-        <span class="countdown-number" id="hours">00</span>
-        <span class="countdown-label">Часов</span>
-    </div>
-    <div class="countdown-item">
-        <span class="countdown-number" id="minutes">00</span>
-        <span class="countdown-label">Минут</span>
-    </div>
-    <div class="countdown-item">
-        <span class="countdown-number" id="seconds">00</span>
-        <span class="countdown-label">Секунд</span>
-    </div>
-</div>
-    </section>
+</section>
 
     <!-- About Section -->
     <section class="about">
