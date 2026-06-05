@@ -337,6 +337,9 @@
         }
         
         @media (max-width: 768px) {
+.hero-overlay {
+        transform: translateY(20%); 
+    }
             .hero-photo {
                 object-fit: contain;
                 background: #E8D5D0;
@@ -841,12 +844,12 @@
             <p class="quiz-question">Какой любимый герой Александра в Dota 2?</p>
             <div class="quiz-options">
                 <button class="quiz-option" onclick="checkAnswer(false)">🪝 Pudge</button>
-                <button class="quiz-option" onclick="checkAnswer(true)">👑 Wraith King</button>
+                <button class="quiz-option" onclick="checkAnswer(true)">🏹 Windranger</button>
                 <button class="quiz-option" onclick="checkAnswer(false)">🦗 Crixalis</button>
                 <button class="quiz-option" onclick="checkAnswer(false)">✨ Io</button>
             </div>
             <div id="quizResult" class="quiz-result" style="display: none;">
-                <p class="success-text">✨ Правильно! Wraith King — король бессмертен, как и наша любовь! ❤️👑</p>
+                <p class="success-text">✨ Правильно! Windranger — лучший герой, а Наталья — лучшая невеста! ❤️🏹</p>
                 <img src="images/secret.jpg" alt="Секретное фото" class="secret-photo">
                 <p class="secret-message">GG WP! Ты настоящий геймер!</p>
             </div>
