@@ -433,6 +433,31 @@
                 max-width: 100%;
             }
         }
+/* Мобильная версия */
+@media (max-width: 768px) {
+    /* Поднимаем фото на телефоне (показываем больше верха) */
+    .hero-photo {
+        object-position: center 15%; 
+    }
+
+    .hero-overlay h1 {
+        font-size: 2rem !important;
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }
+    
+    .hero-overlay .date {
+        font-size: 1.1rem !important;
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }
+    
+    .hero-overlay .subtitle {
+        font-size: 0.9rem !important;
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }
+}
     </style>
 </head>
 <body>
