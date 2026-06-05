@@ -41,9 +41,19 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 5%;  /* Сдвигаем фокус вниз, чтобы показать лица */
-    opacity: 0.5;  /* Делаем фото чуть ярче */
+    object-position: center 5%;
+    opacity: 1;  /* Фото в полной яркости */
 }
+
+.hero-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);  /* Тёмный слой поверх фото */
+    z-index: -1;
 }
 
 .hero-overlay {
@@ -255,20 +265,13 @@
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
-              .hero-overlay h1 {
-        font-size: 2.8rem !important;
-        letter-spacing: 2px !important;
-    }
-    
-    .hero-overlay .date {
-        font-size: 1rem !important;
-        letter-spacing: 3px !important;
-    }
-    
-    .hero-overlay .subtitle {
-        font-size: 0.95rem !important;
-    }
-}
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .date {
+                font-size: 1.2rem;
+            }
             
             h2 {
                 font-size: 2rem;
@@ -337,7 +340,7 @@
         object-fit: contain;  /* Показываем фото целиком, без обрезки */
         background: #E8D5D0;  /* Пастельный фон по бокам */
     }
-    
+    }
    @media (max-width: 768px) {
     .hero-overlay h1 {
         font-size: 2rem !important;
