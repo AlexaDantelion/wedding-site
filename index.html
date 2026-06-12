@@ -703,6 +703,59 @@
                 font-size: 1rem;
             }
         }
+.no-flowers-notice {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #F0E6DC 0%, #F9F5F3 100%);
+    border: 2px solid #D4A5A5;
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(212, 165, 165, 0.2);
+}
+
+.notice-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.notice-text {
+    text-align: left;
+}
+
+.notice-text strong {
+    display: block;
+    color: #A58B8B;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.notice-text p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+    .no-flowers-notice {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.2rem;
+        gap: 1rem;
+    }
+    
+    .notice-text {
+        text-align: center;
+    }
+    
+    .notice-icon {
+        font-size: 2rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -817,6 +870,14 @@
             <div class="color-box" style="background: #F0E6DC;"></div>
         </div>
         <p><em>Пожалуйста, избегайте белого и черного цветов</em></p>
+<div class="no-flowers-notice">
+    <span class="notice-icon">🌿</span>
+    <div class="notice-text">
+        <strong>Пожалуйста, без цветов!</strong>
+        <p>Наталья не очень любит букеты, а у Александра аллергия на пыльцу 🤧<br>
+        Лучший подарок — ваше присутствие и хорошее настроение! 💜</p>
+    </div>
+</div>
     </section>
 
     <!-- RSVP Section -->
